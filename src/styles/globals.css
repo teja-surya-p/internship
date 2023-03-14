@@ -216,6 +216,7 @@ a {
   box-shadow: 5px 8px 15px #d9d9d9,
     -2px -2px 6px #ffffff;
   border-radius: 10px;
+  position: relative;
 }
 
 .logs button:hover {
@@ -256,6 +257,8 @@ a {
   font-size: 32px;
   font-weight: 800;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
   margin: 4rem;
   background-color: rgba(60, 60, 60, 0.419);
   color: rgb(99, 251, 162);
@@ -288,27 +291,27 @@ a {
 
 .disAll {
   display: none;
-  position: absolute;
-  /* top: 0px; */
-  background-color: rgba(0, 0, 0, 0.598);
-  height: 100vh;
+  /* position: absolute; */
+  top: 100vh;
+  left: 0px;
+  /* background-color: rgba(0, 0, 0, 0.598); */
+  height: 70vh;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-
 }
 
 .mSR {
   margin-top: 10%;
-  display: block;
-  margin-left: 1rem;
   border-bottom: 1px solid red;
   border-right: 0.5px solid red;
   border-left: 0.5px solid red;
   border-top: 5px solid rgb(255, 76, 76);
   padding-top: 2px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 40px;
+  max-width: 95vw;
+
 }
 
 .mSR h1 {
@@ -319,14 +322,14 @@ a {
 }
 
 .SR {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5px;
-  width: 50;
+  width: 90vw;
   height: 50vh;
   background-color: rgb(34, 38, 43);
   color: rgb(255, 252, 193);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,10 +341,21 @@ a {
   flex-direction: column;
 }
 
+.subSR1{
+  float: left;
+}
+
+.subSR2 {
+  float: right;
+  white-space: nowrap;
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+}
+
 .SR label {
-  padding: 1rem;
-  margin-right: 2rem;
-  margin: 0.2rem;
+  padding: 0.8rem;
+  /* margin-right: 1rem; */
+  /* margin: 0.2rem; */
 }
 
 .MainLoginDiv {
@@ -507,6 +521,26 @@ a {
     margin-top: 1.3rem;
   }
 
+
+
+  .mSR {
+    margin-top: 5%;
+  }
+
+  .mSR h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .SR {
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+
 }
 
 @media screen and (max-width: 450px) {
@@ -631,6 +665,37 @@ a {
     box-shadow: 20px 20px 60px #d9d9d9,
       -20px -20px 60px #ffffff;
     background-color: #25aa77;
+  }
+
+  .disAll {
+    margin-top: 2rem;
+    height: 35vh;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+
+  .mSR {
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .mSR h1 {
+    font-size: 20px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+  }
+
+  .SR {
+    height: 20vh;
+    padding-top: 1rem;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .SR label {
+    padding: 0.3rem;
   }
 
 }

@@ -5,14 +5,15 @@ import NavBar from './components/navBar';
 import SomeRender from './components/somerender';
 
 const MyPage = () => {
-  const [labels, setlabels] = useState(null)
-  const [hash, setHash] = useState(null)
+  // const [labels, setlabels] = useState(null)
+  // const [hash, setHash] = useState(null)
   let lineGraphData = {
     title: 'Line Graph',
-    labels: ['09:14:08', '09:14:08', '09:14:08', '09:14:08', '09:14:08', '09:14:08', '09:14:08', '09:14:08', '09:14:08'],
+    labels: ['2/2/23', '4/2/23', '9/2/23', '13/2/23', '22/2/23', '23/2/23', '2/3/23', '3/3/23', '11/3/23'],
     values: [0, 10, -10, 30, 5, 22, 31, 29, 29,]
   }
   function handle() {
+    // console.log("logging click")
     if (document.getElementsByClassName('block')[0].style.display === "none") {
       document.getElementsByClassName('block')[0].style.display = "block"
     }
@@ -21,13 +22,11 @@ const MyPage = () => {
     }
   }
   function show() {
-    if (document.getElementsByClassName('mSR')[0].style.display === "none") {
-      document.getElementsByClassName('mSR')[0].style.display = "block"
-      console.log(document.getElementsByClassName('mSR'))
-      // alert('clicked')
+    if (document.getElementById('Ublock').style.display === "none") {
+      document.getElementById('Ublock').style.display = "block"
     }
     else {
-      document.getElementsByClassName('mSR')[0].style.display = "none"
+      document.getElementById('Ublock').style.display = "none"
     }
   }
   useEffect(() => {
@@ -49,13 +48,14 @@ const MyPage = () => {
         return ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year + '<br>';
       }
       const dates = data1.map((d) => convertTimestampToDate(d.block_time));
-      console.log(dates)
-      const meta = []
-      setlabels(dates)
-      setHash(hash)
-      var arrayVariable = labels;
-      var arrayLength = labels.length;
+      // console.log(dates.length)
+      // const meta = []
+      // setlabels(dates)
+      // setHash(hash)
+      var arrayVariable = dates;
+      var arrayLength = dates.length;
       var temp1;
+
       for (let i = 0; i < arrayLength - 2; i++) {
         if (typeof document !== 'undefined') {
           temp1 = document.createElement('div');
@@ -84,16 +84,13 @@ const MyPage = () => {
 
       <div className="logs">
         <button onClick={handle}>Logs</button>
+        <SomeRender />
         <div className='block'>
           <div className='logsDiv'>
             <div className="logData1"></div>
           </div>
         </div>
-        <div onClick={show}>
-          <SomeRender />
-        </div>
       </div>
-
     </div>
   );
 };
