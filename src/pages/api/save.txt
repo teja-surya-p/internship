@@ -1,0 +1,49 @@
+
+          // div1 = document.createElement('div')
+          // div1.className = 'mSR'
+          // div1.id = i
+
+
+          // sdiv1 = document.createElement('div')
+          // sdiv1.className = 'SR'
+
+          // heading = document.createElement('h1')
+          // heading.innerHTML = "METADATA"
+
+          // sub1 = document.createElement('div')
+          // sub1.className = 'subSR1'
+
+          // temp111 = document.createElement('label')
+          // temp111.innerHTML = 'Timestamp'
+          // temp112 = document.createElement('label')
+          // temp112.innerHTML = 'temperature'
+          // temp113 = document.createElement('label')
+          // temp113.innerHTML = 'onchain_server_sha256'
+          // temp114 = document.createElement('label')
+          // temp114.innerHTML = 'iot_server_sha256'
+          // temp115 = document.createElement('label')
+          // temp115.innerHTML = 'feta_node_id'
+
+          // document.getElementsByClassName('subSR1')[0].appendChild(temp111 + temp112 + temp113 + temp114 + temp115);
+
+          // sub2 = document.createElement('div')
+          // sub2.className = 'subSR2'
+
+          // temp1111 = document.createElement('label')
+          // temp1111.innerHTML = arrayVariable[i]
+          // temp1121 = document.createElement('label')
+          // temp1121.innerHTML = arrayTemp[i]
+          // temp1131 = document.createElement('label')
+          // temp1131.innerHTML = arraychain[i]
+          // temp1141 = document.createElement('label')
+          // temp1141.innerHTML = arrayriot[i]
+          // temp1151 = document.createElement('label')
+          // temp1151.innerHTML = arrayId[i]
+
+          // document.getElementsByClassName('subSR2')[0].appendChild(temp1111 + temp1121 + temp1131 + temp1141 + temp1151);
+
+          // document.getElementsByClassName('SR')[0].appendChild(heading + sub1 + sub2);
+
+          // document.getElementsByClassName('mSR')[0].appendChild(sdiv1);
+
+          // document.getElementsByClassName('logsDiv')[0].appendChild(div1);
