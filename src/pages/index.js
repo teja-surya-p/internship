@@ -1,6 +1,6 @@
 // import Chart from "chart.js"
 import { useState, useEffect } from 'react'
-import LineGraph from "./components/lineGraph"
+import LineGraph from "./components/LineGraph"
 import NavBar from './components/navBar';
 import SomeRender from './components/somerender';
 
