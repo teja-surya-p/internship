@@ -162,9 +162,8 @@ a {
 }
 
 .graphMain {
-  height: 30%;
+  height: 55vh;
   width: 100%;
-  /* background-color: #25aa77; */
 }
 
 .graph h1 {
@@ -199,7 +198,7 @@ a {
   justify-content: center;
 }
 
-.textDiv h1{
+.textDiv h1 {
   color: black;
 }
 
@@ -271,8 +270,9 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   margin: 1rem;
-  background-color: rgba(6, 72, 42, 0.45);
-  color: rgb(99, 251, 162);
+  background-color: rgba(2, 31, 20, 0.683);
+  /* color: rgb(99, 251, 162); */
+  color: rgb(255, 252, 193);
   border-radius: 5px;
   padding: 2rem 1rem 2rem 1rem;
   text-align: left;
@@ -290,7 +290,8 @@ a {
   /* box-shadow: 1.5px 4px 6px #757575, */
   /* -1.5px -1.5px 4.5px #ffffff; */
   /* transition: 0.1s; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  cursor: pointer;
 }
 
 .results:active {
@@ -465,13 +466,13 @@ a {
   }
 
   .Nav .img1 img {
-    height: 7vh;
-    width: 7vw;
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
   .Nav .img2 img {
-    height: 7vh;
-    width: 35vw;
+    height: 3.5rem;
+    width: 17.5rem;
   }
 
   .Nav-Admin button {
@@ -500,7 +501,7 @@ a {
   }
 
   .graphMain {
-    height: 30%;
+    height: 60vh;
     width: 100%;
   }
 
@@ -516,38 +517,49 @@ a {
   }
 
   .results {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 11px;
+    font-weight: 400;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin: 1rem;
   }
 
-  .results:hover {
+  /* .results:hover {
     margin-top: 1.15rem;
   }
 
   .results:active {
     margin-top: 1.3rem;
+  } */
+
+  .disAll {
+    height: 15rem;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
-
-
 
   .mSR {
     margin-top: 5%;
   }
 
   .mSR h1 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    text-align: center;
   }
 
   .SR {
-    padding: 0.5rem;
+    width: 70vw;
+    height: 10rem;
+    padding: 0.4rem;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 400;
+  }
+
+  .SR label {
+    padding: 0.2rem;
   }
 
 
@@ -558,20 +570,28 @@ a {
   .Nav {
     padding-top: 0rem;
     padding-bottom: 0rem;
-    height: 4rem;
+    /* height: 4rem; */
   }
 
   .Nav .img1 img {
-    height: 4vh;
-    width: 6vw;
+    height: 2rem;
+    width: 2rem;
   }
 
   .Nav .img2 img {
-    height: 4vh;
-    width: 30vw;
+    height: 2rem;
+    width: 7rem;
   }
 
-  .Nav-Admin button {
+  .Nav h1 {
+    font-size: 28px;
+  }
+
+  .Nav p{
+    font-size: 22px;
+  }
+
+  /* .Nav-Admin button {
     right: 0.5rem;
     height: 4.5vh;
     width: 14vw;
@@ -587,13 +607,13 @@ a {
   .Nav-Admin button:active {
     top: 1.2rem;
     right: 0.38rem;
-  }
+  } */
 
   .loginStyleDiv {
     padding: 0rem;
     border-radius: 5px;
-    box-shadow: 5px 4px 66px #a4eac8cb,
-      -5px -4px 66px rgb(246, 252, 248);
+    /* box-shadow: 5px 4px 66px #a4eac8cb, */
+      /* -5px -4px 66px rgb(246, 252, 248); */
   }
 
   .loginImgDiv {
@@ -651,10 +671,6 @@ a {
     padding-bottom: 0rem;
   }
 
-  .graphMain {
-    height: 20vh;
-    width: 80vw;
-  }
 
   .graph h1 {
     color: rgb(45, 45, 45);
@@ -662,50 +678,51 @@ a {
   }
 
   .subGraph {
-    margin-top: 5vh;
-    margin-bottom: 2vh;
     width: 100vw;
-    height: 30vh;
-    font-size: 30px;
-    font-weight: 700;
-    padding: 0.2rem;
-    border-radius: 50px;
-    border-radius: 50px;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
-    box-shadow: 20px 20px 60px #d9d9d9,
-      -20px -20px 60px #ffffff;
-    background-color: #25aa77;
+    font-size: 20px;
   }
 
   .disAll {
-    margin-top: 2rem;
-    height: 35vh;
+    margin-top: 1rem;
+    height: 20vh;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+    padding: 0.2rem;
   }
 
   .mSR {
     text-align: center;
     margin-top: 2%;
+    padding: 0.2rem;
   }
 
   .mSR h1 {
-    font-size: 20px;
+    font-size: 10px;
     margin-top: 0rem;
     margin-bottom: 0rem;
     margin-left: 0rem;
   }
 
   .SR {
-    height: 20vh;
-    padding-top: 1rem;
+    height: 15vh;
+    width: 100%;
+    padding-top: 0.1rem;
     border-radius: 5px;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: 6px;
+    font-weight: 400;
   }
 
   .SR label {
     padding: 0.3rem;
   }
+
+  .results {
+    font-size: 6px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 0.3rem;
+  }
+
 
 }

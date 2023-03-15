@@ -20,13 +20,13 @@ const LineGraph = ({ data }) => {
         ],
       },
       options: {
-        // responsive: true,
-        // maintainAspectRatio: false,
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
           x: {
             ticks: {
-              autoSkip: true,
-              maxTicksLimit: 20,
+              // autoSkip: true,
+              // maxTicksLimit: 20,
             },
           },
           y: {

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import LineGraph from "./components/LineGraph"
 import NavBar from './components/navBar';
 import SomeRender from './components/somerender';
+import useSWR, { useSWRPages } from 'swr'
+
 
 const MyPage = () => {
   // const [labels, setlabels] = useState(null)
@@ -46,7 +48,10 @@ const MyPage = () => {
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var day = date.getDate();
-        return ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year + '<br>';
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        return ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2)  +" "+ ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year +  '<br>';
       }
       const dates = data1.map((d) => convertTimestampToDate(d.block_time));
       // console.log(dates.length)
