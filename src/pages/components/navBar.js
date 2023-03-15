@@ -7,19 +7,24 @@ function NavBar() {
     }
     return (
         <div className="Nav">
-            <div className='img1'>
-                <img
-                    src="https://res.cloudinary.com/diln1gaxk/image/upload/f_auto,c_limit,w_256,q_auto/Foorigin/foorgin_logo_green_n1fre0.png"
-                    alt="Feta logo"
-                    height="66vh"
-                    width="66vw" />
+            <div className='Nav-sub'>
+                <div className='img1'>
+                    <img
+                        src="https://res.cloudinary.com/diln1gaxk/image/upload/f_auto,c_limit,w_256,q_auto/Foorigin/foorgin_logo_green_n1fre0.png"
+                        alt="Feta logo"
+                        height="66vh"
+                        width="66vw" />
+                </div>
+                <div className='img2'>
+                    <img
+                        src="https://res.cloudinary.com/diln1gaxk/image/upload/f_auto,c_limit,w_3840,q_auto/Foorigin/fetachain_quality_typeface_abiwte.png"
+                        alt="Feta Chain"
+                        height="66vh"
+                        width="320vw" />
+                </div>
             </div>
-            <div className='img2'>
-                <img
-                    src="https://res.cloudinary.com/diln1gaxk/image/upload/f_auto,c_limit,w_3840,q_auto/Foorigin/fetachain_quality_typeface_abiwte.png"
-                    alt="Feta Chain"
-                    height="66vh"
-                    width="320vw" />
+            <div className="textDiv">
+                <h1>Edge </h1><p> IIoT </p><h1> on Cardano</h1>
             </div>
 
             {/* <div className="Nav-Admin">

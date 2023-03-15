@@ -77,9 +77,6 @@ const MyPage = () => {
     <div className='indexmain'>
       <NavBar />
       <div className='graph'>
-        <div className="textDiv">
-          <h1>Edge </h1><p> IIoT </p><h1> on Cardano</h1>
-        </div>
         <div className="subGraph">
           <LineGraph data={lineGraphData} />
         </div>
