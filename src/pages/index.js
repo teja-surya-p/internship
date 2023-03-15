@@ -1,14 +1,11 @@
-// import Chart from "chart.js"
 import { useState, useEffect } from 'react'
 import LineGraph from "./components/LineGraph"
 import NavBar from './components/navBar';
 import SomeRender from './components/somerender';
-import useSWR, { useSWRPages } from 'swr'
+// import useSWR, { useSWRPages } from 'swr'
 
 
 const MyPage = () => {
-  // const [labels, setlabels] = useState(null)
-  // const [hash, setHash] = useState(null)
   let lineGraphData = {
     title: 'Line Graph',
     labels: ['2/2/23', '4/2/23', '9/2/23', '13/2/23', '22/2/23', '23/2/23', '2/3/23', '3/3/23', '11/3/23'],
@@ -40,7 +37,12 @@ const MyPage = () => {
         }
       })
         .then(res => (res).json())
+
+      const [count, setCount] = useState(0);
+
       const data1 = JSON.parse(JSON.stringify(res))
+
+      
       const hash = data1.map((d) => d.tx_hash)
       function convertTimestampToDate(timestampString) {
         var timestamp = parseInt(timestampString);
@@ -51,13 +53,9 @@ const MyPage = () => {
         var hours = date.getHours();
         var minutes = date.getMinutes();
         var seconds = date.getSeconds();
-        return ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2)  +" "+ ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year +  '<br>';
+        return ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2) + " " + ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year + '<br>';
       }
       const dates = data1.map((d) => convertTimestampToDate(d.block_time));
-      // console.log(dates.length)
-      // const meta = []
-      // setlabels(dates)
-      // setHash(hash)
       var arrayVariable = dates;
       var arrayLength = dates.length;
       var temp1;
@@ -70,8 +68,6 @@ const MyPage = () => {
           temp1.innerHTML = arrayVariable[i] + 'tx_hash : ' + '<br>' + hash[i]
           temp1.addEventListener('click', show)
           document.getElementsByClassName('logData1')[0].appendChild(temp1);
-          // var div = document.getElementById('Ublock')
-          // document.getElementsByClassName('logData1')[0].appendChild(div);
         }
       }
     }
