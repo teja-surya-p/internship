@@ -22,9 +22,9 @@ function NavBar() {
                     width="320vw" />
             </div>
 
-            <div className="Nav-Admin">
+            {/* <div className="Nav-Admin">
                 <button onClick={redirect}> Admin Login</button>
-            </div>
+            </div> */}
         </div>
     )
 }

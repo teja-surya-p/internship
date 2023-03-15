@@ -13,7 +13,6 @@ const MyPage = () => {
     values: [0, 10, -10, 30, 5, 22, 31, 29, 29,]
   }
   function handle() {
-    // console.log("logging click")
     if (document.getElementsByClassName('block')[0].style.display === "none") {
       document.getElementsByClassName('block')[0].style.display = "block"
     }
@@ -21,9 +20,11 @@ const MyPage = () => {
       document.getElementsByClassName('block')[0].style.display = "none"
     }
   }
-  function show() {
+  function show(e) {
+    var element = e.target || e.srcElement;
     if (document.getElementById('Ublock').style.display === "none") {
       document.getElementById('Ublock').style.display = "block"
+      document.getElementById(element.id).appendChild(document.getElementById('Ublock'))
     }
     else {
       document.getElementById('Ublock').style.display = "none"
@@ -61,9 +62,11 @@ const MyPage = () => {
           temp1 = document.createElement('div');
           temp1.className = 'results';
           temp1.id = 'results' + i
-          temp1.innerHTML = arrayVariable[i] + 'tx_hash : ' + hash[i]
+          temp1.innerHTML = arrayVariable[i] + 'tx_hash : ' + '<br>' + hash[i]
           temp1.addEventListener('click', show)
           document.getElementsByClassName('logData1')[0].appendChild(temp1);
+          // var div = document.getElementById('Ublock')
+          // document.getElementsByClassName('logData1')[0].appendChild(div);
         }
       }
     }
