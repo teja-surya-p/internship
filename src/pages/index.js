@@ -2,14 +2,18 @@ import { useState, useEffect } from 'react'
 import LineGraph from "./components/LineGraph"
 import NavBar from './components/navBar';
 import SomeRender from './components/somerender';
-// import useSWR, { useSWRPages } from 'swr'
 
 
 const MyPage = () => {
+  const [count, setCount] = useState(6)
   let lineGraphData = {
     title: 'Line Graph',
     labels: ['2/2/23', '4/2/23', '9/2/23', '13/2/23', '22/2/23', '23/2/23', '2/3/23', '3/3/23', '11/3/23'],
     values: [0, 10, -10, 30, 5, 22, 31, 29, 29,]
+  }
+  function load() {
+    setCount(count + 1)
+    append(count)
   }
   function handle() {
     if (document.getElementsByClassName('block')[0].style.display === "none") {
@@ -37,12 +41,8 @@ const MyPage = () => {
         }
       })
         .then(res => (res).json())
-
-      const [count, setCount] = useState(0);
-
+        .catch((err) => console.log(err.message))
       const data1 = JSON.parse(JSON.stringify(res))
-
-      
       const hash = data1.map((d) => d.tx_hash)
       function convertTimestampToDate(timestampString) {
         var timestamp = parseInt(timestampString);
@@ -56,23 +56,26 @@ const MyPage = () => {
         return ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2) + ':' + ("0" + seconds).slice(-2) + " " + ("0" + day).slice(-2) + '/' + ("0" + month).slice(-2) + "/" + year + '<br>';
       }
       const dates = data1.map((d) => convertTimestampToDate(d.block_time));
-      var arrayVariable = dates;
-      var arrayLength = dates.length;
       var temp1;
 
-      for (let i = 0; i < arrayLength - 2; i++) {
-        if (typeof document !== 'undefined') {
-          temp1 = document.createElement('div');
-          temp1.className = 'results';
-          temp1.id = 'results' + i
-          temp1.innerHTML = arrayVariable[i] + 'tx_hash : ' + '<br>' + hash[i]
-          temp1.addEventListener('click', show)
-          document.getElementsByClassName('logData1')[0].appendChild(temp1);
+      // console.log(count)
+
+        for (let i = 0 ; i < dates.length; i++) {
+          if (typeof document !== 'undefined') {
+            temp1 = document.createElement('div');
+            temp1.className = 'results';
+            temp1.id = 'results' + i
+            temp1.innerHTML = dates[i] + 'tx_hash : ' + '<br>' + hash[i]
+            temp1.addEventListener('click', show)
+            document.getElementsByClassName('logData1')[0].appendChild(temp1);
+          }
         }
-      }
     }
     getData();
+
+
   }, []);
+
 
   return (
     <div className='indexmain'>
@@ -82,7 +85,6 @@ const MyPage = () => {
           <LineGraph data={lineGraphData} />
         </div>
       </div>
-
       <div className="logs">
         <button onClick={handle}>Logs</button>
         <SomeRender />
@@ -107,7 +109,6 @@ async function getMetaData(data2) {
   })
     .then(res => (res).json())
     .catch((err) => console.log(err.message))
-
   const Data = JSON.parse(JSON.stringify(res))
   const metadata = Data.map((Time) => Time.json_metadata)
   return metadata
