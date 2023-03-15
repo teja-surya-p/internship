@@ -5,15 +5,10 @@ import SomeRender from './components/somerender';
 
 
 const MyPage = () => {
-  const [count, setCount] = useState(6)
   let lineGraphData = {
     title: 'Line Graph',
     labels: ['2/2/23', '4/2/23', '9/2/23', '13/2/23', '22/2/23', '23/2/23', '2/3/23', '3/3/23', '11/3/23'],
     values: [0, 10, -10, 30, 5, 22, 31, 29, 29,]
-  }
-  function load() {
-    setCount(count + 1)
-    append(count)
   }
   function handle() {
     if (document.getElementsByClassName('block')[0].style.display === "none") {
